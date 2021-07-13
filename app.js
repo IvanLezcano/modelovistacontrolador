@@ -3,6 +3,8 @@ const app = express();
 const port = 3030;
 const path = require("path");
 const mainRouter = require("./routes/main")
+const aboutRouter = require("./routes/about")
+
 
 
 
@@ -10,6 +12,8 @@ const mainRouter = require("./routes/main")
 
 app.use(express.static("public"))
 app.use("/", mainRouter)
+app.use("/about", aboutRouter)
+
 
 
 
